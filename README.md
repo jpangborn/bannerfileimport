@@ -40,3 +40,18 @@ Accomplishes the same two purposes as 1112ISIRCombine.bat
 ### 1112MoveESAR.bat ###
 
 Same file as above.
+
+Processing Direct Loan Files
+----------------------------
+
+Coming Soon
+
+Processing Grant (Pell/ACG/Smart) Files
+---------------------------------------
+
+Coming Soon
+
+Processing Teach Files
+----------------------
+
+Coming Soon
