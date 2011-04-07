@@ -25,6 +25,7 @@ FOR /F %%a IN ('dir /b crth12op.*') DO IF /I %%~xa LSS !ext! (SET ext=%%~xa)
 
 IF NOT EXIST crth12op%ext% (
 ECHO No Other CRTH Files Found.
+PAUSE
 ENDLOCAL
 GOTO :EOF
 )

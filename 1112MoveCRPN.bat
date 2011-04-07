@@ -25,6 +25,7 @@ FOR /F %%a IN ('dir /b crpn12op.*') DO IF /I %%~xa LSS !ext! (SET ext=%%~xa)
 
 IF NOT EXIST crpn12op%ext% (
 ECHO No Other CRPN Files Found.
+PAUSE
 ENDLOCAL
 GOTO :EOF
 )

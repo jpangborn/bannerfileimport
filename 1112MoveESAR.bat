@@ -1,4 +1,5 @@
 @ECHO OFF
 ECHO Processing...
-move /Y 1112esar.tap Z:\
+SET banner_directory=Z:\
+move /Y 1112esar.tap %banner_directory%
 ECHO Completed Successfully

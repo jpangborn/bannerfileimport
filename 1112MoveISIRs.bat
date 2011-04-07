@@ -1,8 +1,9 @@
 @ECHO OFF
 ECHO Processing...
-move /Y idsa12*.* N:\DATA\1112-ISIRS
-move /Y igsa12*.* N:\DATA\1112-ISIRS
-move /Y igsg12*.* N:\DATA\1112-ISIRS
-move /Y igaa12*.* N:\DATA\1112-ISIRS
-move /Y isrf12*.* N:\DATA\1112-ISIRS
+SET to_directory=N:\DATA\1112-ISIRS
+move /Y idsa12*.* %to_directory%
+move /Y igsa12*.* %to_directory%
+move /Y igsg12*.* %to_directory%
+move /Y igaa12*.* %to_directory%
+move /Y isrf12*.* %to_directory%
 ECHO Completed Successfully

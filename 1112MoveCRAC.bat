@@ -25,6 +25,7 @@ FOR /F %%a IN ('dir /b crac12op.*') DO IF /I %%~xa LSS !ext! (SET ext=%%~xa)
 
 IF NOT EXIST crac12op%ext% (
 ECHO No Other CRAC Files Found.
+PAUSE
 ENDLOCAL
 GOTO :EOF
 )

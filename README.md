@@ -44,7 +44,15 @@ Same file as above.
 Processing Direct Loan Files
 ----------------------------
 
-Coming Soon
+These batch files will move, archive and rename Direct Loan files.
+
+### 1112MoveDirectLoans.bat ###
+
+Move all Direct Loan related files from the initial directory to another directory. (N:\DATA\1112-COD by default)
+
+### 1112MoveCRRC.bat ###
+
+If crrc12op.dat exists, copy it to a dated archive folder and then move it to the Banner server. (Mapped to Z:\ by default) If crrc12op.dat does not exist, find the crrc12op file with the lowest extension, rename it crrc12op.dat, copy it to a dated archive folder, and then move it to the Banner server. (Mapped to Z:\ by default) Will display a message when there are no more files to move.
 
 Processing Grant (Pell/ACG/Smart) Files
 ---------------------------------------

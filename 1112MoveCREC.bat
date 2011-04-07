@@ -25,6 +25,7 @@ FOR /F %%a IN ('dir /b crec12op.*') DO IF /I %%~xa LSS !ext! (SET ext=%%~xa)
 
 IF NOT EXIST crec12op%ext% (
 ECHO No Other CREC Files Found.
+PAUSE
 ENDLOCAL
 GOTO :EOF
 )

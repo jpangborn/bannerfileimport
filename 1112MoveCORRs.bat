@@ -1,4 +1,5 @@
 @ECHO OFF
 ECHO Processing...
-move /Y igco12*.* N:\DATA\1112-ISIRS
+SET to_directory=N:\DATA\1112-ISIRS
+move /Y igco12*.* %to_directory%
 ECHO Completed Successfully

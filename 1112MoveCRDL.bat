@@ -25,6 +25,7 @@ FOR /F %%a IN ('dir /b crdl12op.*') DO IF /I %%~xa LSS !ext! (SET ext=%%~xa)
 
 IF NOT EXIST crdl12op%ext% (
 ECHO No Other CRDL Files Found.
+PAUSE
 ENDLOCAL
 GOTO :EOF
 )
