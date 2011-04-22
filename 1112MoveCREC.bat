@@ -13,17 +13,17 @@ SET date=%yyyy%%mm%%dd%
 REM Create a processed directory for the current date if one does not exist 
 IF NOT EXIST N:\DATA\1112-COD\processed_%date% (MD N:\DATA\1112-COD\processed_%date%)
 
-REM Check for existence of crec12op.dat. If it exists, copy it to processed directory and skip to MOVETOZ
-IF EXIST crec12op.dat (
-copy /Y crec12op.dat N:\DATA\1112-COD\processed_%date%
+REM Check for existence of crecmyop.dat. If it exists, copy it to processed directory and skip to MOVETOZ
+IF EXIST crecmyop.dat (
+copy /Y crecmyop.dat N:\DATA\1112-COD\processed_%date%
 GOTO MOVETOZ
 )
 
 REM Find the next lowest file extension
 SET ext=.999
-FOR /F %%a IN ('dir /b crec12op.*') DO IF /I %%~xa LSS !ext! (SET ext=%%~xa)
+FOR /F %%a IN ('dir /b crecmyop.*') DO IF /I %%~xa LSS !ext! (SET ext=%%~xa)
 
-IF NOT EXIST crec12op%ext% (
+IF NOT EXIST crecmyop%ext% (
 ECHO No Other CREC Files Found.
 PAUSE
 ENDLOCAL
@@ -31,14 +31,14 @@ GOTO :EOF
 )
 
 REM Copy file with lowest extension to processed directory
-copy /Y crec12op%ext% N:\DATA\1112-COD\processed_%date%
+copy /Y crecmyop%ext% N:\DATA\1112-COD\processed_%date%
 
-REM Rename the file with the lowest extenion to crec10op.dat
-rename crec12op%ext% crec12op.dat
+REM Rename the file with the lowest extenion to crecmyop.dat
+rename crecmyop%ext% crecmyop.dat
 
 :MOVETOZ
 REM Move current CREC file to the Z:\ Drive
-move /Y crec12op.dat Z:\
+move /Y crecmyop.dat Z:\
 
 ECHO Completed Successfully.
 ENDLOCAL
